@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+$body_bg: #1E213F;
+$font_color: #D7E0FF;
+$dark_blue: #161932;
+$black: #101010;
+$white: #fff;
+$primary: #F87070;
+$blue: #70f3f8;
+$purple: #d881f8;
+$grey: #eff1fa;
+$md_grey: #5d5d5d;
+$dark_grey: #2c2c2c;
+
+body {
+  background-color: $body_bg;
+  height: 93vh;
+}
+
+.container {
+  text-align: center;
+
+  h1 {
+    margin: 3rem 0;
+    color: $font_color;
+  }
+}
+
+#buttonGroup {
+
+  .btn {
+    background-color: $dark_blue !important;
+    text-transform: lowercase;
+  }
+}
+
+.timers .MuiButtonBase-root {
+  margin-top: 4rem !important;
+}
+
+.clock {
+  border-radius: 50% !important;
+  text-align: center !important;
+  margin-top: 4rem !important;
+
+  .timer {
+    box-shadow: rgb(39, 44, 90) -3.125rem -3.125rem 6.25rem 0px, rgb(18, 21, 48) 3.125rem 3.125rem 16.25rem 0px;
+    position: relative;
+    background-image: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h4 {
+      font-size: 80px;
+      padding-top: 50px !important;
+      margin-top: 5rem;
+      margin-bottom: 0;
+      color: $font_color;
+    }
+
+    .inner p {
+      margin-top: 0;
+      font-size: 1rem;
+      letter-spacing: .7rem;
+      color: $font_color;
+      z-index: 999;
+    }
+  }
+
+
+  .CircularProgressbar {
+    height: 340px;
+    width: 340px;
+    position: absolute;
+    top: 9%;
+    left: 9%;
+
+    path {
+      stroke-width: 3px;
+    }
+  }
+}
+
+#settings {
+  margin-top: 4rem;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    color: #797f9d;
+  }
+}
+
+#settingsModal {
+
+
+  .divider {
+    border-color: $md_grey !important;
+  }
+
+  .time {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .numberInput {
+    width: 140px;
+    margin: 0 1rem
+  }
+
+  .submitButton {
+    width: 140px;
+    height: 54px;
+    border-radius: 30px / 25px;
+    margin: 0;
+    color: $white;
+    position: absolute;
+    top: 93%;
+    left: 40%;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  h2,
+  h3 {
+    color: $font_color;
+  }
+
+  .MuiBox-root {
+    padding: 2rem;
+    border-radius: 30px;
+    width: 540px;
+    background-color: $dark_grey;
+    position: relative;
+  }
+
+  .fontSelectBtn {
+    text-transform: capitalize;
+    background-color: $grey;
+    color: $black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin: 0 .4rem;
+    padding: 1rem;
+  }
+
+  .font .active {
+    background-color: $black !important;
+    color: $white !important;
+  }
+
+  .color .active {
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  }
+
+  .numberInput {
+    // background-color: $grey;
+    color: #161932 !important;
+  }
+
+  .font,
+  .color {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .color .red {
+    background-color: $primary;
+  }
+
+  .color .blue {
+    background-color: $blue;
+  }
+
+  .color .purple {
+    background-color: $purple;
+  }
+
+  .sans {
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+
+  .slab {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .mono {
+    font-family: 'Space Mono',
+      monospace;
+  }
+}
+
+@media (max-width : 600px) {
+
+  .time {
+    grid-template-columns: 1fr;
+  }
+
+
+  .clock {
+
+    .timer {
+      width: 300px;
+      height: 300px;
+
+      h4 {
+        font-size: 70px;
+        margin-top: 1.8rem;
+      }
+
+      .inner p {
+        margin-top: 0;
+        font-size: .8rem;
+        letter-spacing: .7rem;
+        color: $font_color;
+      }
+    }
+
+
+    .CircularProgressbar {
+      height: 248px;
+      width: 248px;
+      position: absolute;
+      top: 9%;
+      left: 9%;
+
+      path {
+        stroke-width: 3px;
+      }
+    }
+  }
+
+
+  #settingsModal .submitButton {
+    top: 95%;
+    left: 33%;
+  }
+
+  #settingsModal .MuiBox-root {
+    width: 75% !important;
+
+    .numberInput {
+      padding-bottom: 1rem;
+      margin: 0;
+    }
+
+    .time {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .numberInput {
+      margin: auto;
+    }
+
+    .color {
+      margin-bottom: 2.2rem;
+    }
+
+    .font,
+    .time,
+    .color {
+      text-align: center !important;
+    }
+
+    .font,
+    .color {
+      grid-template-columns: 1fr;
+    }
+  }
+}
